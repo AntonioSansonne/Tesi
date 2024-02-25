@@ -1,0 +1,15 @@
+{
+  "location": {
+    "latitude": 51.562,
+    "longitude": -1.771,
+    "altitude": 101
+  },
+  "toponomy": {
+    "streetNames": ["A 4259", "Magic Roundabout", "Queen’s Drive"],
+    "Language": "en"
+  },
+  "parameters": {
+    "streetCount": 3,
+    "trafficLights": false
+  }
+}

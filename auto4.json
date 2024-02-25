@@ -1,0 +1,15 @@
+{
+  "location": {
+    "latitude": 45.464104,
+    "longitude": 9.190337,
+    "altitude": 120
+  },
+  "toponomy": {
+    "streetNames": ["Via Milano", "Via Roma"],
+    "language": "it"
+  },
+  "parameters": {
+    "streetCount": 2,
+    "trafficLights": true
+  }
+}

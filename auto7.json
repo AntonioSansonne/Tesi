@@ -1,0 +1,15 @@
+{
+  "location": {
+    "latitude": 51.562,
+    "longitude":  -1.771,
+    "altitude": 102
+  },
+  "toponomy": {
+    "streetNames": ["County Road", "Magic Roundabout", "Private Road", "A 4259"],
+    "Language": "en"
+  },
+  "parameters": {
+    "streetCount": 4,
+    "trafficLights": false
+  }
+}

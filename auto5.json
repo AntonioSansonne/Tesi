@@ -1,0 +1,15 @@
+{
+  "location": {
+    "latitude": 51.5605,
+    "longitude": -1.7850,
+    "altitude": 100
+  },
+  "toponomy": {
+    "streetNames": ["County Road", "Drove Road"],
+    "language": "en"
+  },
+  "parameters": {
+    "streetCount": 5,
+    "trafficLights": true
+  }
+}

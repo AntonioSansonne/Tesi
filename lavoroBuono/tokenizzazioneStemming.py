@@ -20,18 +20,18 @@ def levenstein(output):
     from Levenshtein import distance
     # controllo per ogni elemento
     for i in range(len(output) - 1):
-        print("output i ", output[i])
+        # print("output ", output[i])
         l_dist = distance(output[i], output[i + 1])
         # qui al posto del controllo può andarci un algoritmo più elaborato per indicare che effettivamente si stia percorrendo una strada diversa
         # come per esempio:
         # se distanzaLev > 3 allora sono certo che si tratta di parole diverse
-        if l_dist == 0:
-            print("La distanza di Levenshtein tra " + output[i] + " & " + output[i + 1] + " è " + str(l_dist) + "\nStai percorrendo la stessa strada")
-        else:
-            print("La distanza di Levenshtein tra " + output[i] + " & " + output[i + 1] + " è " + str(l_dist) + "\nStai percorrendo una strada diversa")
+        # if l_dist == 0:
+        #     print("La distanza di Levenshtein tra " + output[i] + " & " + output[i + 1] + " è " + str(l_dist) + "\nStai percorrendo la stessa strada")
+        # else:
+        #     print("La distanza di Levenshtein tra " + output[i] + " & " + output[i + 1] + " è " + str(l_dist) + "\nStai percorrendo una strada diversa")
+    return l_dist
 
-
-#input_data = ["Via 1 Calò", "Via I Calo", "Via 1° Calo'"]
-#output_data = tokenStem(input_data)
-#print("A: ",output_data)
-#levenstein(output_data)
+# input_data = ["Via 1 Calò", "Via I Calo", "Via 1° Calo'"]
+# output_data = tokenStem(input_data)
+# print("A: ",output_data)
+# levenstein(output_data)

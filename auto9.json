@@ -1,0 +1,15 @@
+{
+  "location": {
+    "latitude": 51.562,
+    "longitude": -1.772,
+    "altitude": 102
+  },
+  "toponomy": {
+    "streetNames": ["County Road", "Magic Roundabout"],
+    "Language": "en"
+  },
+  "parameters": {
+    "streetCount": 5,
+    "trafficLights": false
+  }
+}

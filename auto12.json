@@ -1,0 +1,15 @@
+{
+  "location": {
+    "latitude": 41.22756019149326,
+    "longitude": 16.29412006669095,
+    "altitude": 106
+  },
+  "toponomy": {
+    "streetNames": ["Via Fornaci","Via M. Atimonelli", "Via Pendio San Lorenzo"],
+    "Language": "it"
+  },
+  "parameters": {
+    "streetCount": 4,
+    "trafficLights": false
+  }
+}
