@@ -1,0 +1,30 @@
+[
+  {
+    "people": {
+      "name": "Antonio",
+      "surname": "Sansonne"
+    },
+    "city": {
+      "from": "Andria",
+      "invited": true
+    },
+    "contact": {
+      "phoneNumber": "3290005880"
+    },
+    "info": {
+      "willBe": true,
+      "willKnow": true,
+      "intolerances": [
+        "No"
+      ],
+      "allergies": [
+        "No"
+      ]
+    },
+    "knowReach": {
+      "isAlone": false,
+      "isSelfEmployed": false,
+      "searchRide": false
+    }
+  }
+]

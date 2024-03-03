@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form di Inserimento Utente</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Inserisci i dati dell'utente</h2>
+        <form id="userForm">
+            <div class="form-group">
+                <label for="name">Nome</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="surname">Cognome</label>
+                <input type="text" class="form-control" id="surname" name="surname" required>
+            </div>
+            <div class="form-group">
+                <label for="city">Città di provenienza</label>
+                <input type="text" class="form-control" id="city" name="city" required>
+            </div>
+            <div class="form-group">
+                <label>La persona è invitata?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="invited" id="invitedYes" value="true" checked>
+                    <label class="form-check-label" for="invitedYes">
+                        Sì
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="invited" id="invitedNo" value="false">
+                    <label class="form-check-label" for="invitedNo">
+                        No
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="phoneNumber">Numero di telefono</label>
+                <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" required>
+            </div>
+            <div class="form-group">
+                <label>La persona sarà presente?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="willBe" id="willBeYes" value="true" checked>
+                    <label class="form-check-label" for="willBeYes">
+                        Sì
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="willBe" id="willBeNo" value="false">
+                    <label class="form-check-label" for="willBeNo">
+                        No
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>La persona farà sapere se sarà presente?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="willKnow" id="willKnowYes" value="true" checked>
+                    <label class="form-check-label" for="willKnowYes">
+                        Sì
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="willKnow" id="willKnowNo" value="false">
+                    <label class="form-check-label" for="willKnowNo">
+                        No
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="intolerances">Eventuali intolleranze (separate da virgola)</label>
+                <input type="text" class="form-control" id="intolerances" name="intolerances">
+            </div>
+            <div class="form-group">
+                <label for="allergies">Eventuali allergie (separate da virgola)</label>
+                <input type="text" class="form-control" id="allergies" name="allergies">
+            </div>
+            <div class="form-group">
+                <label>La persona sarà da sola?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="isAlone" id="isAloneYes" value="true" checked>
+                    <label class="form-check-label" for="isAloneYes">
+                        Sì
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="isAlone" id="isAloneNo" value="false">
+                    <label class="form-check-label" for="isAloneNo">
+                        No
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>La persona è autonoma?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="isSelfEmployed" id="isSelfEmployedYes" value="true" checked>
+                    <label class="form-check-label" for="isSelfEmployedYes">
+                        Sì
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="isSelfEmployed" id="isSelfEmployedNo" value="false">
+                    <label class="form-check-label" for="isSelfEmployedNo">
+                        No
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>La persona cerca un passaggio?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="searchRide" id="searchRideYes" value="true" checked>
+                    <label class="form-check-label" for="searchRideYes">
+                        Sì
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="searchRide" id="searchRideNo" value="false">
+                    <label class="form-check-label" for="searchRideNo">
+                        No
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Invia</button>
+        </form>
+        <div class="container mt-5">
+            <h2>Elenco Utenti</h2>
+             <ul id="usersList" class="list-group"></ul>
+        </div>
+    </div>
+
+    <!-- Bootstrap e jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Script personalizzato per gestire il form -->
+    <script src="script.js"></script>
+</body>
+</html>

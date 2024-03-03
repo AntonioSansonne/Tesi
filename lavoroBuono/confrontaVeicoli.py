@@ -1,8 +1,8 @@
 from Levenshtein import distance as levenshtein_distance
 import math
 import json
-from tokenizzazioneStemming import tokenStem as tS  # Assumiamo che tokenStem sia la funzione importata da tokenStem.py
-from tokenizzazioneStemming import levenstein as lev  # Assumiamo che tokenStem sia la funzione importata da tokenStem.py
+from tokenStem import tokenStem as tS
+from tokenStem import levenstein as lev
 
 
 # Calcola la distanza geografica tra due punti utilizzando le loro coordinate latitudinali e longitudinali
@@ -94,16 +94,16 @@ def calcola_similitudine(json1, json2):
     # else:
     #     print("ALe due auto non si stanno dirigendo verso lo stesso incrocio.")
 
-    # # Calcolo della distanza tra i nomi delle strade
-    # # Utilizza la funzione tokenStem e la distanza di Levenshtein
-    # for strada1, strada2 in zip(json1['toponomy']['streetNames'], json2['toponomy']['streetNames']):
-    #     stemmed_strada1 = tS([strada1])[0]
-    #     print("strada1: "+stemmed_strada1)
-    #     stemmed_strada2 = tS([strada2])[0]
-    #     print("strada2: "+stemmed_strada2)
-    #     distanza_strade = levenshtein_distance(stemmed_strada1, stemmed_strada2)
-    #     print("distanze strade: ", distanza_strade)
-    #     distanze.append(distanza_strade)
+    # Calcolo della distanza tra i nomi delle strade
+    # Utilizza la funzione tokenStem e la distanza di Levenshtein
+    for strada1, strada2 in zip(json1['toponomy']['streetNames'], json2['toponomy']['streetNames']):
+        stemmed_strada1 = tS([strada1])[0]
+        print("strada1: "+stemmed_strada1)
+        stemmed_strada2 = tS([strada2])[0]
+        print("strada2: "+stemmed_strada2)
+        distanza_strade = levenshtein_distance(stemmed_strada1, stemmed_strada2)
+        print("distanze strade: ", distanza_strade)
+        distanze.append(distanza_strade)
 
     # stemmed = []
     # for strada1, strada2 in zip(json1['toponomy']['streetNames'], json2['toponomy']['streetNames']):
@@ -119,22 +119,22 @@ def calcola_similitudine(json1, json2):
     # print("len distanze:", len(distanze))
 
 
-    # Verifica se le strade si intersecano
-    strade_auto1 = json1['toponomy']['streetNames']
-    strade_auto2 = json2['toponomy']['streetNames']
-    intersezione_strade = False
-    for strada1 in strade_auto1:
-        for strada2 in strade_auto2:
-            # Confronto diretto tra le strade
-            if strada1 == strada2:
-                intersezione_strade = True
-                break
-        if intersezione_strade:
-            break
+    # # Verifica se le strade si intersecano
+    # strade_auto1 = json1['toponomy']['streetNames']
+    # strade_auto2 = json2['toponomy']['streetNames']
+    # intersezione_strade = False
+    # for strada1 in strade_auto1:
+    #     for strada2 in strade_auto2:
+    #         # Confronto diretto tra le strade
+    #         if strada1 == strada2:
+    #             intersezione_strade = True
+    #             break
+    #     if intersezione_strade:
+    #         break
 
     # Calcolo dell'indice di similitudine come media delle distanze
-    # indice = sum(distanze) / len(distanze)
-    indice = 1.0 / (1.0 + distanza_geo) if intersezione_strade else 0.0
+    indice = sum(distanze) / len(distanze)
+    # indice = 1.0 / (1.0 + distanza_geo) if intersezione_strade else 0.0
     return indice
 
 
@@ -143,8 +143,8 @@ def leggi_json(file_path):
         return json.load(file)
 
 
-json1 = leggi_json("../auto10.json")
-json2 = leggi_json("../auto8.json")
+json1 = leggi_json("../jsonFile/auto11.json")
+json2 = leggi_json("../jsonFile/auto12.json")
 
 # Calcola e stampa l'indice di similitudine
 indice_similitudine = calcola_similitudine(json1, json2)

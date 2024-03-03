@@ -1,7 +1,5 @@
-import soundex
-
 def custom_intersection_hash(intersection_data):
-    soundex_code = soundex.soundex(intersection_data)
+    soundex_code = trialFile.soundex(intersection_data)
     return soundex_code
 
 input_data = "Via Calò"
