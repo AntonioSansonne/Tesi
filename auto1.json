@@ -1,0 +1,16 @@
+{
+    "__commento__": "Questo JSON rappresenta un'intersezione a Milano, Italia, dove \"Via Dante\" incrocia \"Via dei Mercanti\". L'altitudine è approssimativamente 120 metri sul livello del mare, indicando che si trova in una zona relativamente pianeggiante della città. La presenza di semafori è indicata come true, suggerendo che è un'intersezione regolata da semafori.\n",
+     "location": {
+    "latitude": 45.464104,
+    "longitude": 9.190337,
+    "altitude": 120
+  },
+  "toponomy": {
+    "streetNames": ["Via Dante", "Via dei Mercanti"],
+    "language": "it"
+  },
+  "parameters": {
+    "streetCount": 2,
+    "trafficLights": true
+  }
+}
