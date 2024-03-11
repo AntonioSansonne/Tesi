@@ -1,16 +1,15 @@
 {
-  "__commento__": "Questo secondo JSON descrive un'intersezione vicina alla prima, sempre a Milano, dove Corso Magenta incrocia Via Carducci\n",
   "location": {
-    "latitude": 45.467176,
-    "longitude": 9.185929,
-    "altitude": 115
+    "latitude": 41.22964339334754,
+    "longitude": 16.302018136398157,
+    "altitude": 102
   },
   "toponomy": {
-    "streetNames": ["Corso Magenta", "Via Carducci"],
-    "language": "it"
+    "streetNames": ["Corso Cavour", "Via Firenze", "Corso Cavour", "Via Duca di Genova"],
+    "Language": "en"
   },
   "parameters": {
-    "streetCount": 2,
-    "trafficLights": false
+    "streetCount": 5,
+    "trafficLights": true
   }
 }

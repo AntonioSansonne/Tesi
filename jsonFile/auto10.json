@@ -1,11 +1,11 @@
 {
   "location": {
-    "latitude": 51.562,
-    "longitude": -1.771,
+    "latitude": 41.22964339334754,
+    "longitude": 16.302018136398157,
     "altitude": 102
   },
   "toponomy": {
-    "streetNames": ["Queens Drive", "Magic Roundabout"],
+    "streetNames": ["Corso Cavour", "Via Firenze", "Corso Cavour", "Via Duca di Genova"],
     "Language": "en"
   },
   "parameters": {

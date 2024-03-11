@@ -6,8 +6,8 @@ import json
 # Questo ci aiuterà a comprendere la struttura dei dati e come applicare le modifiche richieste.
 
 # Percorsi dei file JSON forniti
-auto11_json_path = '../jsonFile/auto9.json'
-auto12_json_path = '../jsonFile/auto12.json'
+auto11_json_path = '../jsonFile/auto10.json'
+auto12_json_path = '../jsonFile/auto13.json'
 
 # Caricamento e visualizzazione dei contenuti dei file JSON
 
@@ -49,7 +49,7 @@ for street1 in auto11_streets_stemmed:
 threshold = 2
 matches = [pair for pair in levenshtein_distances if pair[2] <= threshold]
 
-print(matches)
+# print("matches:", matches)
 
 
 # Per creare un indice numerico che identifichi univocamente l'incrocio e determinare se i due veicoli si stanno dirigendo verso lo stesso incrocio,
@@ -67,11 +67,11 @@ def generate_intersection_index_and_direction(matches):
         direction_message = "I due veicoli sono probabilmente diretti verso lo stesso incrocio."
     else:
         direction_message = "I due veicoli non sembrano diretti verso lo stesso incrocio."
-
+    # print("Indice: ", intersection_index)
     return intersection_index, direction_message
 
 
 # Applicazione della funzione ai risultati del confronto
 intersection_index, direction_message = generate_intersection_index_and_direction(matches)
-print(intersection_index)
+# print(intersection_index)
 print(direction_message)
